@@ -8,9 +8,9 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        // In a real scenario, this gets the source code from SCM.
-        // For this lab, we assume the code or Dockerfile is present.
-        echo 'Checking out code...'
+        def repositoryUrl = 'https://github.com/raghav2006d/vle_7.git'
+        echo "Checking out code from ${repositoryUrl}..."
+        git branch: 'main', url: repositoryUrl
       }
     }
     
