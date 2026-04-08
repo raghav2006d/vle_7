@@ -8,9 +8,8 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        def repositoryUrl = 'https://github.com/raghav2006d/vle_7.git'
-        echo "Checking out code from ${repositoryUrl}..."
-        git branch: 'main', url: repositoryUrl
+        echo "Checking out code from https://github.com/raghav2006d/vle_7.git..."
+        git branch: 'main', url: 'https://github.com/raghav2006d/vle_7.git'
       }
     }
     
